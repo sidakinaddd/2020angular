@@ -1,0 +1,48 @@
+:host{
+    height: 170px;
+}
+.header{
+    position: relative;
+    margin-top:-10px;
+    margin-left:10px;
+    color: rgb(19, 21, 24);
+    font-family: sans-serif;
+    font-size:15px;
+    display: grid;
+    grid-template-columns: 200px 30px 30px 10px;
+    height:30px;
+}
+.middle_div{
+    position: relative;
+    display:grid;
+    grid-template-columns: 40px 200px;
+    font-family: sans-serif;
+    font-size: 12px;
+    height: 50px;
+    
+}
+.h_button{
+    height:30px;
+    width:30px;
+    background-color: transparent;
+    margin-top:10px;
+    border:none;
+    color: rgb(37, 40, 44);
+}
+.h_button:hover{
+    background-color: rgba(141, 153, 224, 0.267);
+}
+.all_content{
+    width:300px;
+    height: 30px;
+ 
+}
+.main_content{
+    width: 300px;
+    height: 70px;
+
+}
+#exit:hover{
+    background-color:rgb(172, 35, 35);
+    color:white;
+}

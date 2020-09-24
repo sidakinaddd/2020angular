@@ -1,0 +1,97 @@
+
+<app-display [number1]="result" [expression]="expression"></app-display>
+<div class = "secondary-grid-container">
+    <div class = "grid-item">
+        <button style="color:gray" (click)="memoryClicked('MC')" class = "secondary-button">MC</button>
+    </div>
+    <div class = "grid-item">
+        <button style = "color:gray" (click)="memoryClicked('MR')" class ="secondary-button">MR</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="memoryClicked('M+')" class = "secondary-button">M+</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="memoryClicked('M-')" class = "secondary-button">M-</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="memoryClicked('MS')" class = "secondary-button">MS</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="memoryClicked('M')"  style = "color:gray" class= "secondary-button">M</button>
+    </div>
+</div>
+<div class = "primary-grid-container">
+    <div class = "grid-item">
+        <button (click)="percentClicked()" class = "primary-button">%</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="clearClicked('CE')"  class = "primary-button">CE</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="clearClicked('C')" class = "primary-button">C</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="backSpaceClicked('⌫')" class = "primary-button">⌫</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="secondaryOperationClicked('⅟x')" class = "primary-button">⅟x</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="secondaryOperationClicked('x^2')" class = "primary-button">x^2</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="secondaryOperationClicked('√‎x')" class = "primary-button">√‎x</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="operationClicked('/')" class = "primary-button">/</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="numberClicked('7')" class = "primary-button-number">7</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="numberClicked('8')" class = "primary-button-number">8</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="numberClicked('9')" class = "primary-button-number">9</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="operationClicked('x')" class = "primary-button">x</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="numberClicked('4')" class = "primary-button-number">4</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="numberClicked('5')" class = "primary-button-number">5</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="numberClicked('6')" class ="primary-button-number">6</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="operationClicked('-')" class = "primary-button">-</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="numberClicked('1')" class = "primary-button-number">1</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="numberClicked('2')" class = "primary-button-number">2</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="numberClicked('3')"class = "primary-button-number">3</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="operationClicked('+')" class = "primary-button">+</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="plusOrMinusClicked('+/-')" class = "primary-button-number">+/-</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="numberClicked('0')" class = "primary-button-number">0</button>
+    </div>
+    <div class = "grid-item">
+        <button  (click)="pointClicked(',')"class = "primary-button-number">,</button>
+    </div>
+    <div class = "grid-item">
+        <button (click)="equalClicked('=')" style = "background-color:rgb(116,176,255)"class = "primary-button">=</button>
+    </div>
+
+</div>
