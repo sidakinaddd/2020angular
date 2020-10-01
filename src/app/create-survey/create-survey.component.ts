@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, FormArray,Validators} from '@angular/forms';
 import {Survey, Question, Option} from '../models/models';
+import { Router } from '@angular/router';
+import { Route } from '@angular/compiler/src/core';
 export interface QuestionType{
   value:string;
   viewValue:string;
@@ -15,7 +17,6 @@ export class CreateSurveyComponent implements OnInit {
   surveyForm:FormGroup;
   selectedOption = [];
   editMode = false;
-  
   questions : QuestionType[]=[
     { value: 'Single choice', viewValue: 'Single choice' },
     { value: 'Multi choice', viewValue: 'Multi choice' },
@@ -23,7 +24,8 @@ export class CreateSurveyComponent implements OnInit {
     { value: 'Rating', viewValue: 'Rating' }
   ]
 
-  constructor() { }
+  constructor( private router:Router 
+    ) { }
 
   ngOnInit() {
     this.initForm();
@@ -101,6 +103,9 @@ export class CreateSurveyComponent implements OnInit {
     let formData = this.surveyForm.value;
     console.log(formData);
 
+    localStorage.setItem('formData', JSON.stringify(formData));
+    this.router.navigate(['fill']);
+
     console.log();
     let ID = 0;
     let Title = formData.surveyTitle;
@@ -151,15 +156,15 @@ export class CreateSurveyComponent implements OnInit {
 
  
       survey.Question.push(questionItem)
-
-
+      
     });
 
 
   }
   onSubmit() {
-
+    
     this.postSurvey();
+
 
   }
 

@@ -1,0 +1,12 @@
+<div>
+    <h2 class="title">{{form.surveyTitle}}</h2>
+    <div *ngFor="let question of form.surveyQuestions">
+        <div>
+            {{question.questionTitle}}
+            
+        </div>
+        <div *ngFor = "let answer of question.questionGroup.options">
+            {{answer.optionText}}
+        </div>
+    </div>
+</div>
